@@ -6,3 +6,4 @@
 [X] make div#container stuff the whole frame
 [X] responsive grid size and tracks
 [X] styling: randomizes tile background
+[X] responsive rows

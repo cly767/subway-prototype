@@ -45,7 +45,6 @@ div.content {
 nav.page-header {
 	height: min-content;
 	padding: 60px 80px;
-	transition: padding 1s var(--ease-out-expo);
 }
 
 h1.title {
@@ -65,32 +64,22 @@ div.window {
 div.film {
 	height: 100%;
 	width: min-content;
-	white-space: nowrap;
 	display: flex;
 	flex-direction: row;
-	align-items: center;
+	align-items: start;
 	animation: 1.38s var(--ease-out-expo) slidein-film;
-}
-
-div.film > * {
-	display: inline-block;
 }
 
 div.group {
 	display: grid;
-	height: 367px;
-	min-height: min-content;
-	max-height: 367px;
 	grid-auto-flow: column;
-	grid-auto-rows: 1fr;
+	grid-template-rows: repeat(auto-fill, 180px);
 	grid-auto-columns: 180px;
 	gap: 7px;
 	margin: 0 80px;
-}
-
-div.group > * {
-	overflow: hidden;
-	text-overflow: ellipsis;
+	height: 100%;
+	width: min-content;
+	flex-grow: 0;
 }
 
 div.group :first-child {
@@ -99,8 +88,13 @@ div.group :first-child {
 }
 
 div.group :nth-child(2) {
-	grid-column: 3 / 5;
-	grid-row: 1 / 2;
+	grid-column: 1 / 3;
+	grid-row: 3 / 4;
+}
+
+div.group > * {
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 div.group > a {
@@ -108,6 +102,7 @@ div.group > a {
 	padding: 5px;
 	text-decoration: none;
 	color: white;
+	display: block;
 }
 
 @media screen and (max-width: 600px) {
@@ -117,6 +112,7 @@ div.group > a {
 
 	div.film {
 		flex-direction: column;
+		align-items: center;
 		height: min-content;
 		width: 100%;
 		padding: 0 0 30px 0;
@@ -125,7 +121,7 @@ div.group > a {
 	div.group {
 		grid-auto-flow: row;
 		grid-auto-rows: 100px;
-		grid-auto-columns: 100px;
+		grid-template-columns: repeat(auto-fit, 100px);
 		height: min-content;
 		width: min-content;
 		margin: 40px 0;
