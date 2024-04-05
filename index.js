@@ -10,4 +10,15 @@ function setTileColors() {
 	}
 }
 
+function setGroupHeight() {
+	let flowWindow = document.getElementById("window");
+	let groups = flowWindow.getElementsByClassName("group");
+	let height = window.getComputedStyle(flowWindow).getPropertyValue("height");
+	for( i of groups )
+		i.style.height = height;
+}
+
 setTileColors()
+setGroupHeight();
+
+window.onresize = setGroupHeight;

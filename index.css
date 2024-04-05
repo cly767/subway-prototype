@@ -77,7 +77,6 @@ div.group {
 	grid-auto-columns: 180px;
 	gap: 7px;
 	margin: 0 80px;
-	height: 100%;
 	width: min-content;
 }
 
