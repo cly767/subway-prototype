@@ -79,7 +79,6 @@ div.group {
 	margin: 0 80px;
 	height: 100%;
 	width: min-content;
-	flex-grow: 0;
 }
 
 div.group :first-child {
