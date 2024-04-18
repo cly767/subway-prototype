@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
+	box-sizing: border-box;
 }
 
 html, body {
@@ -80,12 +81,14 @@ div.group {
 	width: min-content;
 }
 
-div.group :first-child {
+div.group > a:first-child {
 	grid-column: 1 / 3;
 	grid-row: 1 / 3;
+	font-size: x-large;
+	font-weight: 365;
 }
 
-div.group :nth-child(2) {
+div.group > a:nth-child(2) {
 	grid-column: 1 / 3;
 	grid-row: 3 / 4;
 }
@@ -96,57 +99,42 @@ div.group > * {
 }
 
 div.group > a {
-	user-select: none;
-	padding: 5px;
 	text-decoration: none;
-	color: white;
-	display: block;
 }
 
-@media screen and (max-width: 600px) {
-	nav.page-header {
-		padding: 30px 40px;
-	}
+div.group > a.tile > div.tile-text {
+	user-select: none;
+	-webkit-user-select: none;
+	padding: 5px;
+	color: white;
+	background-color: rgb(0, 0, 0, 0.48);
+	transition: background-color var(--ease-out-expo) 1s;
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	top: -100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 3;
+	display: -webkit-box;
+}
 
-	div.film {
-		flex-direction: column;
-		align-items: center;
-		height: min-content;
-		width: 100%;
-		padding: 0 0 30px 0;
-	}
+div.group > a.tile:hover > div.tile-text {
+	background-color: rgb(0, 0, 0, 0.6);
+}
 
-	div.group {
-		grid-auto-flow: row;
-		grid-auto-rows: 100px;
-		grid-template-columns: repeat(auto-fit, 100px);
-		height: min-content;
-		width: min-content;
-		margin: 40px 0;
-	}
+div.group > a.tile > img.tile-bg {
+	object-fit: cover;
+	object-position: center;
+	transition: transform var(--ease-out-expo) 2s;
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: relative;
+	top: 0;
+}
 
-	div.group :nth-child(2) {
-		grid-column: 3 / 4;
-		grid-row: 1 / 2;
-	}
-
-	@keyframes slidein-title {
-		from {
-			transform: translate(0,36px);
-			opacity: 0;
-		} to {
-			transform: translate(0, 0);
-			opacity: 1;
-		}
-	}
-
-	@keyframes slidein-film {
-		from, 38% {
-			transform: translate(0,56px);
-			opacity: 0;
-		} to {
-			transform: translate(0, 0);
-			opacity: 1;
-		}
-	}
+div.group > a.tile:hover > img {
+	transform: scale(1.2);
 }

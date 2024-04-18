@@ -1,4 +1,5 @@
 [ ] shell.nix
+[ ] vertical overflow ellipsis(...)
 
 [X] langservers
 [X] film
