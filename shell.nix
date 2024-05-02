@@ -3,6 +3,6 @@
 		name = "subway development";
 		nativeBuildInputs = with pkgs.buildPackages; [
 			vscode-langservers-extracted
-			nodePackages.live-server
+			nodejs
 		];
 	}
