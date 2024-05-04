@@ -16,13 +16,12 @@ div.content {
 	align-items: center;
 }
 
-nav {
+main {
 	width: var(--page-width);
 }
 
 article {
 	font-size: larger;
-	width: var(--page-width);
 	animation: 1.2s var(--ease-out-expo) slidein;
 }
 
@@ -33,4 +32,9 @@ article p {
 article img {
 	object-fit: contain;
 	max-width: 100%;
+}
+
+article blockquote {
+	border-left: 4px solid lightgray;
+	padding-left: 15px;
 }
