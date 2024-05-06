@@ -1,3 +1,5 @@
+body { overflow: hidden; }
+
 @keyframes slidein {
 	from, 17% {
 		transform: translate(36px);
