@@ -23,11 +23,11 @@ main {
 article {
 	font-size: larger;
 	animation: 1.2s var(--ease-out-expo) slidein;
-	padding-bottom: 2em;
+	padding-bottom: 2.5em;
 }
 
-article p {
-	margin: 0 0 1em 0;
+article p,ol,ul,hr {
+	margin-bottom: 1em;
 }
 
 article h1 {
@@ -61,4 +61,8 @@ article blockquote {
 article code {
 	background-color: #e5e5e5;
 	font-family: monospace;
+}
+
+article ol,ul {
+	padding-left: 1em;
 }
