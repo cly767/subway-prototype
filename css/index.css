@@ -24,7 +24,6 @@ h1.title {
 
 div.window {
 	flex-grow: 1;
-	overflow-x: scroll;
 }
 
 div.film {

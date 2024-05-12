@@ -1,9 +1,9 @@
-- [ ] table
 - [ ] code fence
 - [ ] footnote
 - [ ] definition list
 - [ ] strikethrough
 - [ ] task list
+- [ ] credit?: hexo-theme-oranges
 
 ---
 
@@ -12,3 +12,4 @@
 - [X] unordered list
 - [X] horizontal rule
 - [X] image
+- [X] table

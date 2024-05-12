@@ -33,19 +33,21 @@ article p,ol,ul,hr {
 article h1 {
 	font-size: xxx-large;
 	font-weight: lighter;
-	margin: 1em 0;
 }
 
 article h2 {
 	font-size: xx-large;
 	font-weight: lighter;
-	margin: 1em 0;
 }
 
 article h3 {
 	font-size: x-large;
 	font-weight: lighter;
-	margin: 1em 0;
+}
+
+article h1,h2,h3 {
+	margin-top: 1em;
+	margin-bottom: 0.6em;
 }
 
 article img {
@@ -65,4 +67,23 @@ article code {
 
 article ol,ul {
 	padding-left: 1em;
+}
+
+article table {
+	border-collapse: collapse;
+	overflow: auto;
+	display: block;
+}
+
+article table * {
+	border: 2px solid lightgray;
+	padding: 6px 13px;
+}
+
+article thead {
+	background-color: #d3d3d350;
+}
+
+article tbody > tr:nth-child(2n) {
+	background-color: #d3d3d350;
 }
