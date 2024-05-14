@@ -1,5 +1,3 @@
-body { overflow: hidden; }
-
 @keyframes slidein {
 	from, 17% {
 		transform: translate(36px);
@@ -12,7 +10,6 @@ body { overflow: hidden; }
 
 nav {
 	padding: 60px 80px;
-	display: flex;
 }
 
 h1.title {
@@ -24,6 +21,7 @@ h1.title {
 
 div.window {
 	flex-grow: 1;
+	overflow: auto;
 }
 
 div.film {

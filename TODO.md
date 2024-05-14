@@ -1,9 +1,8 @@
-- [ ] code fence
-- [ ] footnote
 - [ ] definition list
 - [ ] strikethrough
 - [ ] task list
 - [ ] credit?: hexo-theme-oranges
+- [ ] code fence
 
 ---
 
