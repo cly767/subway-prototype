@@ -1,5 +1,3 @@
-- [ ] definition list
-- [ ] strikethrough
 - [ ] task list
 - [ ] credit?: hexo-theme-oranges
 - [ ] code fence
@@ -12,3 +10,5 @@
 - [X] horizontal rule
 - [X] image
 - [X] table
+- [X] definition list
+- [X] strikethrough

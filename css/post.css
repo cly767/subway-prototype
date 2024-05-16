@@ -27,8 +27,8 @@ article {
 	padding-bottom: 2.5em;
 }
 
-article p,ol,ul,hr {
-	margin-bottom: 1em;
+article p,ol,ul,hr,table,dl {
+	margin-bottom: 1.25em;
 }
 
 article h1 {
@@ -87,4 +87,13 @@ article thead {
 
 article tbody > tr:nth-child(2n) {
 	background-color: #d3d3d350;
+}
+
+article dl dt {
+	font-weight: lighter;
+	font-size: x-large;
+}
+
+article dl dd::before {
+	content: '— ';
 }
