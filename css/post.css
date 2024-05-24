@@ -1,5 +1,6 @@
 :root {
-	--page-width: min(870px, 80%);
+	--page-width: min(870px, 87%);
+	--figure-bg-color: #333;
 }
 
 @keyframes slidein {
@@ -76,16 +77,16 @@ article table {
 	display: block;
 }
 
-article table * {
+article > table * {
 	border: 2px solid lightgray;
 	padding: 6px 13px;
 }
 
-article thead {
+article > table thead {
 	background-color: #d3d3d350;
 }
 
-article tbody > tr:nth-child(2n) {
+article > table tr:nth-child(2n) {
 	background-color: #d3d3d350;
 }
 
@@ -96,4 +97,24 @@ article dl dt {
 
 article dl dd::before {
 	content: '— ';
+}
+
+article input[type="checkbox"] {
+	width: 1.2em;
+	height: 1.2em;
+}
+
+article figure {
+	background-color: var(--figure-bg-color);
+	color: white;
+	line-height: 1.08em;
+}
+
+article figure ::selection {
+	background-color: white;
+	color: black;
+}
+
+article figure pre {
+	padding: 10px;
 }

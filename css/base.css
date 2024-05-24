@@ -11,7 +11,7 @@ html, body {
 }
 
 :root {
-	--main-bg-color: #fff;
+	--main-bg-color: white;
 	--ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
 	font-family: sans-serif;
 }

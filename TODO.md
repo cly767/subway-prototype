@@ -1,6 +1,5 @@
-- [ ] task list
+- [ ] document structure for overlay
 - [ ] credit?: hexo-theme-oranges
-- [ ] code fence
 
 ---
 
@@ -12,3 +11,5 @@
 - [X] table
 - [X] definition list
 - [X] strikethrough
+- [X] code fence
+- [X] task list
