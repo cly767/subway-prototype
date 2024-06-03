@@ -12,13 +12,6 @@ nav {
 	padding: 60px 80px;
 }
 
-h1.title {
-	text-wrap: nowrap;
-	text-overflow: ellipsis;
-	overflow: hidden;
-	width: min-content;
-}
-
 div.window {
 	flex-grow: 1;
 	overflow: auto;

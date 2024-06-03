@@ -13,9 +13,13 @@
 	}
 }
 
-div.content {
+div#content {
 	align-items: center;
-	overflow: auto;
+}
+
+div.title-wrapper {
+	display: flex;
+	flex-direction: column;
 }
 
 main {

@@ -1,4 +1,9 @@
-- [ ] document structure for overlay
+- [ ] overlay navigation
+- [ ] index vertical scroll
+- [ ] rtl languages
+- [ ] refinement:
+    screen readers, easy code copying, fancybox,
+    font, compatibility
 - [ ] credit?: hexo-theme-oranges
 
 ---
