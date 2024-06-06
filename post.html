@@ -8,74 +8,82 @@
 		<link rel="stylesheet" href="css/post.css"/>
 	</head>
 	<body>
-		<div id="navigation"></div>
-		<div id="content">
-			<main>
+		<div>
+			<div class="wrapper">
 				<nav>
 					<div class="title-wrapper">
 						<h1 class="title">Lorem ipsum dolor sit amet</h1>
 						<span class="date">May 1, 2024</span>
 					</div>
 					<div class="separator"></div>
-					<button id="navigationEnter">Navigation</button>
+					<button id="navigationToggle" data-inactive="Navigation" data-active="Exit"></button>
 				</nav>
-				<article>
-					<p><img src="assets/seat.png" loading="lazy" alt="A seat in a classroom" title="A seat in a classroom"/></p>
-					<h1>Heading 1</h1>
-					<h2>Heading 2</h2>
-					<h3>Heading 3</h3>
-					<p><a href="https://example.com" target="_blank">Example Domain</a></p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam varius elementum quam id lacinia. Pellentesque sed mi lobortis, sodales augue sed, pulvinar nisl. Fusce ultricies dictum nulla, eget tempor orci rhoncus non. Etiam vestibulum gravida suscipit. Pellentesque eu felis at diam pharetra fringilla a vel eros.</p>
-					<blockquote><p>Suspendisse potenti. Integer purus massa, commodo ac posuere ac, ullamcorper egestas augue. Integer rutrum felis sem, eu bibendum tortor sollicitudin sit amet. Vestibulum eget gravida libero, et iaculis felis. Aliquam rhoncus orci blandit turpis aliquet molestie. Praesent posuere velit nulla, a laoreet lorem sagittis in. Vestibulum ac mollis ex. Suspendisse potenti.</p></blockquote>
-					<p>You can use <strong>bold</strong> font and <em>italic</em> font to emphasize text. Run <code>nixos-rebuild boot</code> if you want to reconfigure your NixOS machine.</p>
-					<ol>
-						<li>First item</li>
-						<li>Second item</li>
-						<li>Third item</li>
-					</ol>
-					<ul>
-						<li>First item</li>
-						<li>Second item</li>
-						<li>Third item</li>
-					</ul>
-					<hr/>
-					<table>
-						<thead>
-							<tr>
-								<th>title</th>
-								<th>description</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>foo</td>
-								<td>bar</td>
-							</tr>
-							<tr>
-								<td>fee</td>
-								<td>boe</td>
-							</tr>
-						</tbody>
-					</table>
-					<dl>
-						<dt>shell</dt>
-						<dd>A program through which a person interacts with a computer.</dd>
-						<dd>A command-line interface where you can type commands.</dd>
-					</dl>
-					<p><del>The world is flat.</del></p>
-					<ul>
-						<li>
-							<input checked disabled type="checkbox"/>
-							Write a demo site
-						</li>
-						<li>
-							<input disabled type="checkbox"/>
-							Transform demo into a hexo theme
-						</li>
-					</ul>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main(void) &#123;</span><br><span class="line">    printf(&quot;hello world&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-				</article>
-			</main>
+				<div id="content">
+					<div id="navigation">
+						<ul id="siteLinks">
+							<li class="prepared"><a href="/">Home</a></li>
+							<li class="prepared"><a href="/">Tags</a></li>
+							<li class="prepared"><a href="/">About</a></li>
+						</ul>
+					</div>
+					<article>
+						<p><img src="assets/seat.png" loading="lazy" alt="A seat in a classroom" title="A seat in a classroom"/></p>
+						<h1>Heading 1</h1>
+						<h2>Heading 2</h2>
+						<h3>Heading 3</h3>
+						<p><a href="https://example.com" target="_blank">Example Domain</a></p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam varius elementum quam id lacinia. Pellentesque sed mi lobortis, sodales augue sed, pulvinar nisl. Fusce ultricies dictum nulla, eget tempor orci rhoncus non. Etiam vestibulum gravida suscipit. Pellentesque eu felis at diam pharetra fringilla a vel eros.</p>
+						<blockquote><p>Suspendisse potenti. Integer purus massa, commodo ac posuere ac, ullamcorper egestas augue. Integer rutrum felis sem, eu bibendum tortor sollicitudin sit amet. Vestibulum eget gravida libero, et iaculis felis. Aliquam rhoncus orci blandit turpis aliquet molestie. Praesent posuere velit nulla, a laoreet lorem sagittis in. Vestibulum ac mollis ex. Suspendisse potenti.</p></blockquote>
+						<p>You can use <strong>bold</strong> font and <em>italic</em> font to emphasize text. Run <code>nixos-rebuild boot</code> if you want to reconfigure your NixOS machine.</p>
+						<ol>
+							<li>First item</li>
+							<li>Second item</li>
+							<li>Third item</li>
+						</ol>
+						<ul>
+							<li>First item</li>
+							<li>Second item</li>
+							<li>Third item</li>
+						</ul>
+						<hr/>
+						<table>
+							<thead>
+								<tr>
+									<th>title</th>
+									<th>description</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>foo</td>
+									<td>bar</td>
+								</tr>
+								<tr>
+									<td>fee</td>
+									<td>boe</td>
+								</tr>
+							</tbody>
+						</table>
+						<dl>
+							<dt>shell</dt>
+							<dd>A program through which a person interacts with a computer.</dd>
+							<dd>A command-line interface where you can type commands.</dd>
+						</dl>
+						<p><del>The world is flat.</del></p>
+						<ul>
+							<li>
+								<input checked disabled type="checkbox"/>
+								Write a demo site
+							</li>
+							<li>
+								<input disabled type="checkbox"/>
+								Transform demo into a hexo theme
+							</li>
+						</ul>
+						<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main(void) &#123;</span><br><span class="line">    printf(&quot;hello world&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+					</article>
+				</div>
+			</div>
 		</div>
 	</body>
 	<script type="text/javascript" src="js/navigation.js"></script>

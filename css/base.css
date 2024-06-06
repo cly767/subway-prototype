@@ -11,8 +11,11 @@ html, body {
 }
 
 :root {
-	--main-bg-color: white;
-	--ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+	--bgColor: white;
+	--fgColor: black;
+	--hoverBgColor: #eee;
+	--easeOutExpo: cubic-bezier(0.19, 1, 0.22, 1);
+	--pagePadding: 80px;
 	font-family: sans-serif;
 }
 
@@ -21,12 +24,36 @@ html, body {
 	color: white;
 }
 
+button {
+	font-size: larger;
+	letter-spacing: 0.08em;
+	padding: 0.7em;
+	height: min-content;
+	width: min-content;
+	align-self: center;
+	background-color: transparent;
+	border: 3px solid var(--fgColor);
+}
+
+button:hover {
+	background-color: var(--hoverBgColor);
+}
+
+button:active {
+	background-color: var(--fgColor);
+	color: var(--bgColor);
+}
+
 a {
 	color: black;
 }
 
+a:hover {
+	color: #555;
+}
+
 a:active {
-	color: gray;
+	color: #888;
 }
 
 div#navigation {
@@ -35,8 +62,8 @@ div#navigation {
 	width: 100vw;
 	height: 100vh;
 	z-index: 1;
-	transition: opacity 0.2s linear;
-	background-color: var(--main-bg-color);
+	transition: opacity 0.1s linear;
+	background-color: var(--bgColor);
 	opacity: 0;
 	pointer-events: none;
 }
@@ -46,11 +73,32 @@ div#navigation.activated {
 	pointer-events: auto;
 }
 
+div#navigation ul {
+	list-style-type: none;
+}
+
+div#navigation li {
+	font-size: xxx-large;
+	font-weight: lighter;
+	transition-property: transform, opacity;
+	transition-duration: 1.2s;
+	transition-timing-function: var(--easeOutExpo);
+}
+
+div#navigation li.prepared {
+	transform: translateY(36px);
+	opacity: 0;
+}
+
+div#navigation a {
+	text-decoration: none;
+}
+
 nav {
 	display: flex;
 }
 
-div#content {
+body > div {
 	width: 100%;
 	height: 100%;
 	z-index: 0;
@@ -62,7 +110,7 @@ div#content {
 nav {
 	height: min-content;
 	padding: 60px 0;
-	animation: 1s var(--ease-out-expo) slidein;
+	animation: 1s var(--easeOutExpo) slidein;
 	text-overflow: ellipsis;
 	overflow: hidden;
 }

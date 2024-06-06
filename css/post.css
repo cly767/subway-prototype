@@ -1,6 +1,6 @@
 :root {
-	--page-width: min(870px, 87%);
-	--figure-bg-color: #333;
+	--pageWidth: min(870px, 87%);
+	--figureBgColor: #333;
 }
 
 @keyframes slidein {
@@ -13,8 +13,13 @@
 	}
 }
 
-div#content {
+body > div {
 	align-items: center;
+	width: 100vw;
+}
+
+div.wrapper {
+	width: var(--pageWidth);
 }
 
 div.title-wrapper {
@@ -22,13 +27,9 @@ div.title-wrapper {
 	flex-direction: column;
 }
 
-main {
-	width: var(--page-width);
-}
-
 article {
 	font-size: larger;
-	animation: 1.2s var(--ease-out-expo) slidein;
+	animation: 1.2s var(--easeOutExpo) slidein;
 	padding-bottom: 2.5em;
 }
 
@@ -109,7 +110,7 @@ article input[type="checkbox"] {
 }
 
 article figure {
-	background-color: var(--figure-bg-color);
+	background-color: var(--figureBgColor);
 	color: white;
 	line-height: 1.08em;
 }

@@ -8,22 +8,29 @@
 		<link rel="stylesheet" href="css/index.css"/>
 	</head>
 	<body>
-		<div id="navigation"></div>
-		<div id="content">
+		<div>
 			<nav>
 				<h1 class="title">Start</h1>
 				<div class="separator"></div>
-				<button id="navigationEnter">Navigation</button>
+				<button id="navigationToggle" data-inactive="Navigation" data-active="Exit"></button>
 			</nav>
-			<div class="window">
-				<div class="film">
-					<div class="entry">
-						<a href="post.html">Lorem ipsum dolor sit amet</a>
-						<div class="date">May 1, 2024</div>
+			<div id="content">
+				<div id="navigation">
+					<ul id="siteLinks">
+						<li class="prepared"><a href="/">Home</a></li>
+						<li class="prepared"><a href="/">Tags</a></li>
+						<li class="prepared"><a href="/">About</a></li>
+					</ul>
+				</div>
+				<div class="window">
+					<div class="film">
+						<div class="entry">
+							<a href="post.html">Lorem ipsum dolor sit amet</a>
+							<div class="date">May 1, 2024</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 	</body>
 	<script type="text/javascript" src="js/navigation.js"></script>
 </html>

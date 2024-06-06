@@ -8,6 +8,10 @@
 	}
 }
 
+body > div {
+	max-height: 100vh;
+}
+
 nav {
 	padding: 60px 80px;
 }
@@ -24,8 +28,7 @@ div.film {
 	flex-direction: column;
 	flex-wrap: wrap;
 	align-items: start;
-	animation: 1.2s var(--ease-out-expo) slidein;
-	padding: 0 0 0 80px;
+	animation: 1.2s var(--easeOutExpo) slidein;
 }
 
 a {
