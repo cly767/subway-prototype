@@ -16,6 +16,7 @@ html, body {
 	--hoverBgColor: #eee;
 	--easeOutExpo: cubic-bezier(0.19, 1, 0.22, 1);
 	--pagePadding: 80px;
+	--pageWidth: min(870px, 87%);
 	font-family: sans-serif;
 }
 
@@ -58,9 +59,8 @@ a:active {
 
 div#navigation {
 	display: block;
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
+	position: absolute;
+	width: var(--pageWidth);
 	z-index: 1;
 	transition: opacity 0.1s linear;
 	background-color: var(--bgColor);
@@ -73,8 +73,14 @@ div#navigation.activated {
 	pointer-events: auto;
 }
 
-div#navigation ul {
+div#navigation ul#siteLinks {
 	list-style-type: none;
+	padding: 0;
+	height: 0;
+}
+
+div#navigation ul#siteLinks.activated {
+	height: auto;
 }
 
 div#navigation li {
@@ -92,6 +98,10 @@ div#navigation li.prepared {
 
 div#navigation a {
 	text-decoration: none;
+}
+
+div#navigation.activated ~ article {
+	display: none;
 }
 
 nav {

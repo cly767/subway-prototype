@@ -1,10 +1,13 @@
 let navigation= document.getElementById('navigation');
 let navigationToggle = document.getElementById('navigationToggle');
 let siteLinks = document.getElementById('siteLinks');
+let contents = document.getElementById('contents');
+let timerid;
 
 function showSiteLinks(linkList) {
 	let i = 0;
-	let timerid = setInterval(() => {
+	contents.classList.add('activated');
+	timerid = setInterval(() => {
 		linkList[i].classList.remove('prepared');
 		if(i >= linkList.length -1) {
 			clearInterval(timerid);
@@ -17,10 +20,12 @@ function showSiteLinks(linkList) {
 function prepareSiteLinks(linkList) {
 	for( i of linkList )
 		i.classList.add('prepared');
+	contents.classList.remove('activated');
 }
 
 function enterNavigation(e) {
 	navigation.classList.add('activated');
+	siteLinks.classList.add('activated');
 	navigationToggle.innerText = navigationToggle.dataset.active;
 	navigationToggle.removeEventListener('click', enterNavigation);
 	navigationToggle.addEventListener('click', leaveNavigation);
@@ -28,9 +33,13 @@ function enterNavigation(e) {
 }
 
 function leaveNavigation(e) {
+	clearInterval(timerid);
 	prepareSiteLinks(siteLinks.children);
 	setTimeout(() => {
 		navigation.classList.remove('activated');
+		setTimeout(() => {
+			siteLinks.classList.remove('activated');
+		}, 100);
 		navigationToggle.innerText = navigationToggle.dataset.inactive;
 		navigationToggle.removeEventListener('click', leaveNavigation);
 		navigationToggle.addEventListener('click', enterNavigation);
