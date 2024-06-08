@@ -26,7 +26,7 @@ function prepareSiteLinks(linkList) {
 function enterNavigation(e) {
 	navigation.classList.add('activated');
 	siteLinks.classList.add('activated');
-	navigationToggle.innerText = navigationToggle.dataset.active;
+	navigationToggle.classList.add('activated');
 	navigationToggle.removeEventListener('click', enterNavigation);
 	navigationToggle.addEventListener('click', leaveNavigation);
 	setTimeout(showSiteLinks, 100, siteLinks.children);
@@ -35,16 +35,15 @@ function enterNavigation(e) {
 function leaveNavigation(e) {
 	clearInterval(timerid);
 	prepareSiteLinks(siteLinks.children);
+	navigationToggle.classList.remove('activated');
 	setTimeout(() => {
 		navigation.classList.remove('activated');
 		setTimeout(() => {
 			siteLinks.classList.remove('activated');
 		}, 100);
-		navigationToggle.innerText = navigationToggle.dataset.inactive;
 		navigationToggle.removeEventListener('click', leaveNavigation);
 		navigationToggle.addEventListener('click', enterNavigation);
 	}, 270);
 }
 
 navigationToggle.addEventListener('click', enterNavigation);
-navigationToggle.innerText = navigationToggle.dataset.inactive;

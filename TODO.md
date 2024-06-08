@@ -1,4 +1,3 @@
-- [ ] overlay navigation
 - [ ] index vertical scroll
 - [ ] rtl languages
 - [ ] refinement:
@@ -8,13 +7,4 @@
 
 ---
 
-- [X] code
-- [X] ordered list
-- [X] unordered list
-- [X] horizontal rule
-- [X] image
-- [X] table
-- [X] definition list
-- [X] strikethrough
-- [X] code fence
-- [X] task list
+- [X] overlay navigation

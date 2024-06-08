@@ -45,6 +45,28 @@ button:active {
 	color: var(--bgColor);
 }
 
+button#navigationToggle {
+	width: 65px;
+	height: 65px;
+	overflow: clip;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url('/assets/menu.svg');
+	border: none;
+}
+
+button#navigationToggle:active {
+	background-image: url('/assets/menu_light.svg');
+}
+
+button#navigationToggle.activated {
+	background-image: url('/assets/close.svg');
+}
+
+button#navigationToggle.activated:active {
+	background-image: url('/assets/close_light.svg');
+}
+
 a {
 	color: black;
 }
