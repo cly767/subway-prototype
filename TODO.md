@@ -1,6 +1,5 @@
-- [ ] rtl languages
 - [ ] refinement:
-    screen readers, easy code copying, fancybox,
+    screen readers, easy code copying,
     font, compatibility
 - [ ] credit?: hexo-theme-oranges
 
