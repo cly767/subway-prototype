@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Subway Demo</title>
+		<title>Subway Prototype</title>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width,initial-scale=1"/>
 		<link rel="stylesheet" href="css/base.css"/>
@@ -9,28 +9,31 @@
 	</head>
 	<body>
 		<div>
-			<nav>
-				<h1 class="title">Start</h1>
-				<div class="separator"></div>
-				<button id="navigationToggle"></button>
-			</nav>
-			<div>
-				<div id="navigation">
-					<ul id="siteLinks">
-						<li class="prepared"><a href="/">Home</a></li>
-						<li class="prepared"><a href="/">Tags</a></li>
-						<li class="prepared"><a href="/">About</a></li>
-					</ul>
-				</div>
-				<article id="contents" class="window">
-					<div class="film">
-						<div class="entry">
+			<div class="wrapper">
+				<nav>
+					<div class="titleWrapper">
+						<h1 class="title">Subway Prototype</h1>
+					</div>
+					<div class="separator"></div>
+					<button id="navigationToggle" class="centerSelf"></button>
+				</nav>
+				<main>
+					<div id="navigation">
+						<ul id="siteLinks">
+							<li class="prepared"><a href="/">Home</a></li>
+							<li class="prepared"><a href="/">Tags</a></li>
+							<li class="prepared"><a href="/">About</a></li>
+						</ul>
+					</div>
+					<div id="contents">
+						<article class="entry">
 							<a href="post.html">Lorem ipsum dolor sit amet</a>
 							<div class="date">May 1, 2024</div>
-						</div>
+						</article>
 					</div>
-				</article>
+				</main>
 			</div>
+		</div>
 	</body>
 	<script type="text/javascript" src="js/navigation.js"></script>
 </html>

@@ -6,7 +6,6 @@ let timerid;
 
 function showSiteLinks(linkList) {
 	let i = 0;
-	contents.classList.add('activated');
 	timerid = setInterval(() => {
 		linkList[i].classList.remove('prepared');
 		if(i >= linkList.length -1) {
@@ -20,12 +19,10 @@ function showSiteLinks(linkList) {
 function prepareSiteLinks(linkList) {
 	for( i of linkList )
 		i.classList.add('prepared');
-	contents.classList.remove('activated');
 }
 
 function enterNavigation(e) {
 	navigation.classList.add('activated');
-	siteLinks.classList.add('activated');
 	navigationToggle.classList.add('activated');
 	navigationToggle.removeEventListener('click', enterNavigation);
 	navigationToggle.addEventListener('click', leaveNavigation);
@@ -38,9 +35,6 @@ function leaveNavigation(e) {
 	navigationToggle.classList.remove('activated');
 	setTimeout(() => {
 		navigation.classList.remove('activated');
-		setTimeout(() => {
-			siteLinks.classList.remove('activated');
-		}, 100);
 		navigationToggle.removeEventListener('click', leaveNavigation);
 		navigationToggle.addEventListener('click', enterNavigation);
 	}, 270);

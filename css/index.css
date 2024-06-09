@@ -1,36 +1,3 @@
-@keyframes slidein {
-	from, 17% {
-		transform: translate(36px);
-		opacity: 0;
-	} to {
-		transform: translate(0, 0);
-		opacity: 1;
-	}
-}
-
-body > div {
-	max-height: 100vh;
-}
-
-nav {
-	padding: 60px 80px;
-}
-
-div.window {
-	flex-grow: 1;
-	overflow: auto;
-}
-
-div.film {
-	height: 100%;
-	width: min-content;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	align-items: start;
-	animation: 1.2s var(--easeOutExpo) slidein;
-}
-
 a {
 	text-decoration: none;
 }
@@ -38,10 +5,5 @@ a {
 .entry {
 	font-size: xxx-large;
 	font-weight: lighter;
-	padding: 0 80px 40px 0;
-	width: min-content;
-	max-width: 600px;
-	text-wrap: nowrap;
-	text-overflow: ellipsis;
-	overflow: hidden;
+	margin-bottom: 1em;
 }

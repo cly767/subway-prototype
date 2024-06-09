@@ -1,4 +1,3 @@
-- [ ] index vertical scroll
 - [ ] rtl languages
 - [ ] refinement:
     screen readers, easy code copying, fancybox,
@@ -8,3 +7,4 @@
 ---
 
 - [X] overlay navigation
+- [X] index vertical scroll

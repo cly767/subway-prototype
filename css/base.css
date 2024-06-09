@@ -5,15 +5,28 @@
 }
 
 html, body {
-	width: 100%;
-	height: 100%;
-	overflow: auto;
+	width: 100vw;
+	height: 100vh;
+}
+
+@keyframes slidein {
+	from, 17% {
+		transform: translate(0, 36px);
+		opacity: 0;
+	} to {
+		transform: translate(0, 0);
+		opacity: 1;
+	}
 }
 
 :root {
 	--bgColor: white;
 	--fgColor: black;
+	--selectBgColor: black;
+	--selectFgColor: white;
 	--hoverBgColor: #eee;
+	--codeBgColor: #333;
+	--codeFgColor: white;
 	--easeOutExpo: cubic-bezier(0.19, 1, 0.22, 1);
 	--pagePadding: 80px;
 	--pageWidth: min(870px, 87%);
@@ -21,19 +34,20 @@ html, body {
 }
 
 ::selection {
-	background-color: black;
-	color: white;
+	background-color: var(--selectBgColor);
+	color: var(--selectFgColor);
+}
+
+.outlined {
+	border: 3px solid var(--fgColor);
 }
 
 button {
-	font-size: larger;
 	letter-spacing: 0.08em;
 	padding: 0.7em;
-	height: min-content;
-	width: min-content;
-	align-self: center;
-	background-color: transparent;
-	border: 3px solid var(--fgColor);
+	background-color: var(--bgColor);
+	color: var(--fgColor);
+	border: none;
 }
 
 button:hover {
@@ -52,7 +66,7 @@ button#navigationToggle {
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-image: url('/assets/menu.svg');
-	border: none;
+	align-self: center;
 }
 
 button#navigationToggle:active {
@@ -67,17 +81,9 @@ button#navigationToggle.activated:active {
 	background-image: url('/assets/close_light.svg');
 }
 
-a {
-	color: black;
-}
-
-a:hover {
-	color: #555;
-}
-
-a:active {
-	color: #888;
-}
+a { color: black; }
+a:hover { color: #555; }
+a:active { color: #888; }
 
 div#navigation {
 	display: block;
@@ -98,10 +104,6 @@ div#navigation.activated {
 div#navigation ul#siteLinks {
 	list-style-type: none;
 	padding: 0;
-	height: 0;
-}
-
-div#navigation ul#siteLinks.activated {
 	height: auto;
 }
 
@@ -118,28 +120,30 @@ div#navigation li.prepared {
 	opacity: 0;
 }
 
-div#navigation a {
-	text-decoration: none;
-}
+div#navigation a { text-decoration: none; }
 
-div#navigation.activated ~ article {
+div#navigation.activated ~ #contents {
 	display: none;
 }
 
-nav {
-	display: flex;
+div.wrapper {
+	width: var(--pageWidth);
 }
 
-body > div {
-	width: 100%;
-	height: 100%;
-	z-index: 0;
-	position: relative;
+div.titleWrapper {
 	display: flex;
 	flex-direction: column;
 }
 
+body > div {
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 nav {
+	display: flex;
 	height: min-content;
 	padding: 60px 0;
 	animation: 1s var(--easeOutExpo) slidein;
@@ -154,11 +158,16 @@ div.separator {
 h1.title {
 	font-size: xxx-large;
 	font-weight: lighter;
-	color: black;
 }
 
 .date {
 	font-size: x-large;
 	font-weight: initial;
 	color: grey;
+}
+
+#contents {
+	font-size: larger;
+	animation: 1.2s var(--easeOutExpo) slidein;
+	padding-bottom: 2.5em;
 }
