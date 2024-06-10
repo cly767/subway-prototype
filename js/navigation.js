@@ -1,3 +1,4 @@
+'use strict';
 let navigation= document.getElementById('navigation');
 let navigationToggle = document.getElementById('navigationToggle');
 let siteLinks = document.getElementById('siteLinks');
@@ -17,7 +18,7 @@ function showSiteLinks(linkList) {
 }
 
 function prepareSiteLinks(linkList) {
-	for( i of linkList )
+	for( let i of linkList )
 		i.classList.add('prepared');
 }
 
