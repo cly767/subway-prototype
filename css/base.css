@@ -42,6 +42,13 @@ html, body {
 	border: 3px solid var(--fgColor);
 }
 
+.transparent { opacity: 0; }
+
+.truncated {
+	height: 0;
+	padding-bottom: 0;
+}
+
 button {
 	letter-spacing: 0.08em;
 	padding: 0.7em;
@@ -122,8 +129,12 @@ div#navigation li.prepared {
 
 div#navigation a { text-decoration: none; }
 
-div#navigation.activated ~ #contents {
-	display: none;
+#contents {
+	font-size: larger;
+	animation: 1.2s var(--easeOutExpo) slidein;
+	transition: opacity .1s linear;
+	padding-bottom: 2.5em;
+	overflow: clip;
 }
 
 div.wrapper {
@@ -164,10 +175,4 @@ h1.title {
 	font-size: x-large;
 	font-weight: initial;
 	color: grey;
-}
-
-#contents {
-	font-size: larger;
-	animation: 1.2s var(--easeOutExpo) slidein;
-	padding-bottom: 2.5em;
 }
