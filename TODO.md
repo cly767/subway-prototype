@@ -1,7 +1,8 @@
-- [ ] refinement:
-    screen readers, easy code copying,
-    font, compatibility
-- [ ] credit?: hexo-theme-oranges
+- [ ] a11y: screen readers, reduced motion
+- [ ] easy code copying
+- [ ] font
+- [ ] compatibility
+- [ ] credit: hexo-theme-oranges
 
 ---
 
