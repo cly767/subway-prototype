@@ -36,6 +36,10 @@ article blockquote {
 	padding-left: 1em;
 }
 
+article figure .codeHeader {
+	padding-bottom: 0.25em;
+	display: flex;
+}
 article figure table {
 	background-color: var(--codeBgColor);
 	color: var(--codeFgColor);

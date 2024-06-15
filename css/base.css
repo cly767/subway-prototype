@@ -51,6 +51,7 @@ html, body {
 
 button {
 	letter-spacing: 0.08em;
+	font-weight: bold;
 	padding: 0.7em;
 	background-color: var(--bgColor);
 	color: var(--fgColor);
