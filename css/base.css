@@ -59,7 +59,7 @@ button {
 }
 
 button:hover {
-	background-color: var(--hoverBgColor);
+	filter: brightness(0.93);
 }
 
 button:active {
