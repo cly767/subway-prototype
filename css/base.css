@@ -73,20 +73,20 @@ button#navigationToggle {
 	overflow: clip;
 	background-size: contain;
 	background-repeat: no-repeat;
-	background-image: url('/assets/menu.svg');
+	background-image: url('/images/menu.svg');
 	align-self: center;
 }
 
 button#navigationToggle:active {
-	background-image: url('/assets/menu_light.svg');
+	background-image: url('/images/menu_light.svg');
 }
 
 button#navigationToggle.activated {
-	background-image: url('/assets/close.svg');
+	background-image: url('/images/close.svg');
 }
 
 button#navigationToggle.activated:active {
-	background-image: url('/assets/close_light.svg');
+	background-image: url('/images/close_light.svg');
 }
 
 a { color: black; }
