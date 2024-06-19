@@ -10,17 +10,17 @@ article p,ol,ul,hr,table,dl {
 
 article h1 {
 	font-size: xxx-large;
-	font-weight: lighter;
+	font-weight: 100;
 }
 
 article h2 {
 	font-size: xx-large;
-	font-weight: lighter;
+	font-weight: 100;
 }
 
 article h3 {
 	font-size: x-large;
-	font-weight: lighter;
+	font-weight: 100;
 }
 
 article h1,h2,h3 {
@@ -42,11 +42,17 @@ article figure .codeHeader {
 	padding-bottom: 0.25em;
 	display: flex;
 }
+
+article figure .codeHeader {
+	font-family: 'Roboto Mono', monospace;
+}
+
 article figure table {
 	background-color: var(--codeBgColor);
 	color: var(--codeFgColor);
 	--selectBgColor: white;
 	--selectFgColor: black;
+	font-family: 'Roboto Mono', monospace;
 }
 
 article code {
@@ -55,6 +61,7 @@ article code {
 	padding: 0 0.12em;
 	--selectBgColor: white;
 	--selectFgColor: black;
+	font-family: 'Roboto Mono', monospace;
 }
 
 article ol,ul {
@@ -73,7 +80,7 @@ article > table * {
 }
 
 article dl dt {
-	font-weight: lighter;
+	font-weight: 100;
 	font-size: x-large;
 }
 

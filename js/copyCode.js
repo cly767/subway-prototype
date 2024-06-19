@@ -13,6 +13,7 @@ function setupCopyCode() {
 		let lang = i.classList[1];
 		if( lang !== undefined )
 			codeLang.innerText = lang;
+		codeLang.classList.add('codeLang');
 
 		separator.classList.add('separator');
 

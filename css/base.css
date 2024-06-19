@@ -67,7 +67,8 @@ html, body {
 	--pageWidth: min(870px, 87%);
 	background-color: var(--bgColor);
 	color: var(--fgColor);
-	font-family: sans-serif;
+	font-family: 'Roboto', sans-serif;
+	font-display: swap;
 }
 
 ::selection {
@@ -88,7 +89,7 @@ html, body {
 
 button {
 	letter-spacing: 0.08em;
-	font-weight: bold;
+	font-weight: 700;
 	padding: 0.7em;
 	background-color: var(--bgColor);
 	color: var(--fgColor);
@@ -112,6 +113,7 @@ button#navigationToggle {
 	background-repeat: no-repeat;
 	background-image: url('/images/menu.svg');
 	align-self: center;
+	flex-shrink: 0;
 }
 
 button#navigationToggle:active {
@@ -154,7 +156,7 @@ nav#navigation ul#siteLinks {
 
 nav#navigation li {
 	font-size: xxx-large;
-	font-weight: lighter;
+	font-weight: 100;
 	transition-property: transform, opacity;
 	transition-duration: 1.2s;
 	transition-timing-function: var(--easeOutExpo);
@@ -206,7 +208,7 @@ div.separator {
 
 h1.title {
 	font-size: xxx-large;
-	font-weight: lighter;
+	font-weight: 100;
 }
 
 #contents {
