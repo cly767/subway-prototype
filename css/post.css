@@ -1,3 +1,9 @@
+@media screen and (prefers-color-scheme: dark) {
+	article img {
+		filter: brightness(.67);
+	}
+}
+
 article p,ol,ul,hr,table,dl {
 	margin-bottom: 1.25em;
 }
@@ -28,7 +34,7 @@ article img {
 }
 
 article blockquote {
-	border-left: 4px solid lightgray;
+	border-left: 4px solid var(--bgSecondary);
 	padding-left: 1em;
 }
 
@@ -62,21 +68,17 @@ article table {
 }
 
 article > table * {
-	border: 2px solid lightgray;
+	border: 2px solid var(--bgSecondary);
 	padding: 6px 13px;
-}
-
-article > table thead {
-	background-color: #d3d3d350;
-}
-
-article > table tr:nth-child(2n) {
-	background-color: #d3d3d350;
 }
 
 article dl dt {
 	font-weight: lighter;
 	font-size: x-large;
+}
+
+article del::selection {
+	text-decoration: var(--selectFgColor);
 }
 
 article input[type="checkbox"] {
