@@ -7,6 +7,7 @@
 html, body {
 	width: 100vw;
 	height: 100vh;
+	background-color: var(--bgColor);
 }
 
 @keyframes slidein {
@@ -19,12 +20,27 @@ html, body {
 	}
 }
 
+@media print {
+	button, nav {
+		display: none;
+	}
+
+	article a::after {
+		content: '(' attr(href) ')';
+		color: var(--fgSecondary);
+	}
+
+	article img {
+		break-inside: avoid;
+	}
+}
+
 :root {
 	--bgColor: white;
 	--fgColor: black;
+	--fgSecondary: grey;
 	--selectBgColor: black;
 	--selectFgColor: white;
-	--hoverBgColor: #eee;
 	--codeBgColor: #333;
 	--codeFgColor: white;
 	--easeOutExpo: cubic-bezier(0.19, 1, 0.22, 1);
@@ -93,7 +109,7 @@ a { color: black; }
 a:hover { color: #555; }
 a:active { color: #888; }
 
-div#navigation {
+nav#navigation {
 	display: block;
 	position: absolute;
 	width: var(--pageWidth);
@@ -104,18 +120,18 @@ div#navigation {
 	pointer-events: none;
 }
 
-div#navigation.activated {
+nav#navigation.activated {
 	opacity: 1;
 	pointer-events: auto;
 }
 
-div#navigation ul#siteLinks {
+nav#navigation ul#siteLinks {
 	list-style-type: none;
 	padding: 0;
 	height: auto;
 }
 
-div#navigation li {
+nav#navigation li {
 	font-size: xxx-large;
 	font-weight: lighter;
 	transition-property: transform, opacity;
@@ -123,12 +139,12 @@ div#navigation li {
 	transition-timing-function: var(--easeOutExpo);
 }
 
-div#navigation li.prepared {
+nav#navigation li.prepared {
 	transform: translateY(36px);
 	opacity: 0;
 }
 
-div#navigation a { text-decoration: none; }
+nav#navigation a { text-decoration: none; }
 
 #contents {
 	font-size: larger;
@@ -154,7 +170,7 @@ body > div {
 	align-items: center;
 }
 
-nav {
+header {
 	display: flex;
 	height: min-content;
 	padding: 60px 0;
