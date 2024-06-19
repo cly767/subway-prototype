@@ -1,6 +1,6 @@
 - [ ] font
 - [ ] compatibility
-- [ ] a11y: screen readers, reduced motion
+- [P] a11y: screen readers, reduced motion
 - [ ] credit: hexo-theme-oranges, https://flyhigher.top/develop/1912.html
 
 ---

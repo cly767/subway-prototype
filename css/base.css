@@ -35,6 +35,25 @@ html, body {
 	}
 }
 
+@media (prefers-reduced-motion: reduce) {
+	*:not(nav#navigation, nav#navigation li, #contents) {
+		animation: none !important;
+		transition: none !important;
+	}
+
+	#contents {
+		animation: none !important;
+	}
+
+	nav#navigation li {
+		transition-property: opacity !important;
+	}
+
+	nav#navigation li.prepared {
+		transform: none !important;
+	}
+}
+
 :root {
 	--bgColor: white;
 	--fgColor: black;
@@ -186,6 +205,10 @@ div.separator {
 h1.title {
 	font-size: xxx-large;
 	font-weight: lighter;
+}
+
+#contents {
+	font-size: larger;
 }
 
 .date {

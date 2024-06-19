@@ -1,4 +1,17 @@
 'use strict';
+function updateState(mql) {
+	if(mql.matches)
+		animate = false;
+	else
+		animate = true;
+}
+// state indicator
+let animate = true;
+let mql = window.matchMedia('(prefers-reduced-motion: reduce)');
+mql.addListener(updateState);
+// init on page load
+updateState(mql);
+
 // getting stuff
 let navigation= document.getElementById('navigation');
 let navigationToggle = document.getElementById('navigationToggle');
@@ -17,7 +30,7 @@ function showSiteLinks(linkList) {
 			return;
 		}
 		i++;
-	}, 50);
+	}, animate?50:0);
 }
 
 function prepareSiteLinks(linkList) {
@@ -33,12 +46,13 @@ function enterNavigation(e) {
 	navigationToggle.classList.add('activated');
 	// fade out
 	contents.classList.add('transparent')
+	if(!animate) showSiteLinks(siteLinks.children);
 	setTimeout(linkList => {
 		// activate the navigation layer
 		navigation.classList.add('activated');
 		// hide the contents
 		contents.classList.add('truncated');
-		showSiteLinks(linkList);
+		if(animate) showSiteLinks(linkList);
 	}, 100, siteLinks.children);
 }
 
