@@ -155,7 +155,7 @@ nav#navigation ul#siteLinks {
 }
 
 nav#navigation li {
-	font-size: xxx-large;
+	font-size: 48px;
 	font-weight: 100;
 	transition-property: transform, opacity;
 	transition-duration: 1.2s;
@@ -208,7 +208,7 @@ div.separator {
 }
 
 h1.title {
-	font-size: xxx-large;
+	font-size: 48px;
 	font-weight: 100;
 }
 
@@ -217,7 +217,7 @@ h1.title {
 }
 
 .date {
-	font-size: x-large;
+	font-size: 22px;
 	font-weight: initial;
 	color: grey;
 }
