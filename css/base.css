@@ -160,6 +160,7 @@ nav#navigation li {
 	transition-property: transform, opacity;
 	transition-duration: 1.2s;
 	transition-timing-function: var(--easeOutExpo);
+	margin-bottom: 0.27em;
 }
 
 nav#navigation li.prepared {
