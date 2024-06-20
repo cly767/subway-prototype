@@ -9,17 +9,17 @@ article p,ol,ul,hr,table,dl {
 }
 
 article h1 {
-	font-size: xxx-large;
+	font-size: 48px;
 	font-weight: 100;
 }
 
 article h2 {
-	font-size: xx-large;
+	font-size: 28.8px;
 	font-weight: 100;
 }
 
 article h3 {
-	font-size: x-large;
+	font-size: 22px;
 	font-weight: 100;
 }
 
@@ -87,7 +87,7 @@ article > table * {
 
 article dl dt {
 	font-weight: 100;
-	font-size: x-large;
+	font-size: 22px;
 }
 
 article del::selection {
