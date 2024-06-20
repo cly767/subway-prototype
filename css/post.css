@@ -28,6 +28,12 @@ article h1,h2,h3 {
 	margin-bottom: 0.6em;
 }
 
+article h1:first-child,
+		h2:first-child,
+		h3:first-child {
+			margin-top: 0;
+}
+
 article img {
 	object-fit: contain;
 	max-width: 100%;
