@@ -135,7 +135,7 @@ nav#navigation {
 	position: absolute;
 	width: var(--pageWidth);
 	z-index: 1;
-	transition: opacity 0.1s linear;
+	transition: opacity .1s linear;
 	background-color: var(--bgColor);
 	opacity: 0;
 	pointer-events: none;
@@ -170,7 +170,6 @@ nav#navigation a { text-decoration: none; }
 
 #contents {
 	font-size: larger;
-	animation: .3s linear fadein;
 	transition: opacity .1s linear;
 	padding-bottom: 2.5em;
 	overflow: clip;
@@ -185,18 +184,20 @@ div.titleWrapper {
 	flex-direction: column;
 }
 
-body > div {
+#pageContainer {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	animation: .3s linear fadein;
+	transition: opacity .1s linear;
 }
 
-header {
+#header {
 	display: flex;
 	height: min-content;
 	padding: 60px 0;
-	animation: .3s linear fadein;
+	transition: opacity .1s linear;
 	text-overflow: ellipsis;
 	overflow: hidden;
 }
