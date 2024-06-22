@@ -6,6 +6,7 @@
 		--fgSecondary: #ccc;
 		--selectBgColor: #ddd;
 		--selectFgColor: #1e1e1e;
+		scrollbar-color: #5a5a5a #2d2d2d;
 	}
 
 	button:hover {
