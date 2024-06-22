@@ -67,6 +67,8 @@ html, body {
 	color: var(--fgColor);
 	font-family: 'Roboto', sans-serif;
 	font-display: swap;
+	overflow-y: scroll;
+	scrollbar-color: var(--fgSecondary) var(--bgColor);
 }
 
 ::selection {
@@ -198,8 +200,6 @@ div.titleWrapper {
 	height: min-content;
 	padding: 60px 0;
 	transition: opacity .1s linear;
-	text-overflow: ellipsis;
-	overflow: hidden;
 }
 
 div.separator {
