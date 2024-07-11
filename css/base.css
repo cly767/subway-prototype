@@ -52,8 +52,8 @@ html, body {
 }
 
 :root {
-	--bgColor: #f0f0f0;
-	--fgColor: black;
+	--bgColor: #fff;
+	--fgColor: #000;
 	--bgSecondary: lightgrey;
 	--fgSecondary: #555;
 	--selectBgColor: black;
