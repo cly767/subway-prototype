@@ -51,6 +51,20 @@ html, body {
 	}
 }
 
+@media screen and (max-width: 450px) {
+	#header {
+		flex-direction: column-reverse !important;
+	}
+
+	#header .separator {
+		display: none !important;
+	}
+
+	#navigationToggle {
+		align-self: end !important;
+	}
+}
+
 :root {
 	--bgColor: #fff;
 	--fgColor: #000;
@@ -209,10 +223,6 @@ div.separator {
 h1.title {
 	font-size: 48px;
 	font-weight: 100;
-}
-
-#contents {
-	font-size: larger;
 }
 
 .date {

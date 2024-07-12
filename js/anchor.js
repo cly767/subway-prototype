@@ -12,6 +12,9 @@ function setupAnchorAnimation() {
 				}, 100);
 			}
 		});
+	window.addEventListener('pageshow', e => {
+		pageContainer.classList.remove('transparent');
+	});
 }
 
 setupAnchorAnimation();
