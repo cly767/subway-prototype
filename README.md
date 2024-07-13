@@ -8,4 +8,4 @@ Clone this repo and **place this repo under a webserver's document root**. The c
 
 ## License
 
-TBD
+MIT
